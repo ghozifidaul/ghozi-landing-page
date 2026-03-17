@@ -17,8 +17,12 @@ export default function SeoHead({ profile, siteUrl = "https://ghozi-landing-page
     "@type": "Person",
     name: profile.name,
     jobTitle: profile.role,
+    description: profile.bio,
     url: siteUrl,
+    email: `mailto:${profile.email}`,
+    image: `${siteUrl}/ghozifidaul.webp`,
     sameAs: [profile.github, profile.linkedin],
+    knowsAbout: profile.skills.flatMap((skill) => skill.items),
     address: {
       "@type": "PostalAddress",
       addressLocality: profile.location,
@@ -43,6 +47,9 @@ export default function SeoHead({ profile, siteUrl = "https://ghozi-landing-page
       <meta property="og:site_name" content={profile.name} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:alt" content={`${profile.name} personal website preview`} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:locale" content="en_US" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
