@@ -1,12 +1,13 @@
 type SectionHeadingProps = {
   title: string;
   subtitle?: string;
+  id?: string;
 };
 
-export default function SectionHeading({ title, subtitle }: SectionHeadingProps) {
+export default function SectionHeading({ title, subtitle, id }: SectionHeadingProps) {
   return (
     <div className="mb-8">
-      <h2 className="text-xl font-semibold tracking-tight text-fg">
+      <h2 id={id} className="text-xl font-semibold tracking-tight text-fg">
         {title}
       </h2>
       {subtitle && (

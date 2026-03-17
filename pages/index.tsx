@@ -61,19 +61,19 @@ export default function Home() {
         <main>
           {/* Skills */}
           <section className="mb-16" aria-labelledby="skills-heading">
-            <SectionHeading title="Skills" />
+            <SectionHeading id="skills-heading" title="Skills" />
             <SkillList skills={profile.skills} />
           </section>
 
           {/* Experience */}
           <section className="mb-16" aria-labelledby="experience-heading">
-            <SectionHeading title="Experience" />
+            <SectionHeading id="experience-heading" title="Experience" />
             <ExperienceList items={profile.experience} />
           </section>
 
           {/* Projects */}
           <section className="mb-16" aria-labelledby="projects-heading">
-            <SectionHeading title="Projects" />
+            <SectionHeading id="projects-heading" title="Projects" />
             <div className="grid gap-4 sm:grid-cols-2">
               {profile.projects.map((project) => (
                 <ProjectCard key={project.title} project={project} />
