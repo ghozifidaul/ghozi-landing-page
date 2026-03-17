@@ -28,6 +28,7 @@ export type Profile = {
   email: string;
   github: string;
   linkedin: string;
+  keywords?: string[];
   skills: Skill[];
   experience: ExperienceItem[];
   projects: ProjectItem[];
