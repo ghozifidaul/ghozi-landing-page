@@ -1,5 +1,3 @@
-import { Geist, Geist_Mono } from "next/font/google";
-
 import SeoHead from "@/components/SeoHead";
 import SectionHeading from "@/components/SectionHeading";
 import SkillList from "@/components/SkillList";
@@ -7,19 +5,9 @@ import ExperienceList from "@/components/ExperienceList";
 import ProjectCard from "@/components/ProjectCard";
 import profile from "@/data/profile";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export default function Home() {
   return (
-    <div className={`${geistSans.variable} ${geistMono.variable} font-sans`}>
+    <>
       <SeoHead profile={profile} />
 
       <div className="mx-auto max-w-2xl px-6 py-20">
@@ -58,7 +46,7 @@ export default function Home() {
           </nav>
         </header>
 
-        <main>
+        <main id="main-content">
           {/* Skills */}
           <section className="mb-16" aria-labelledby="skills-heading">
             <SectionHeading id="skills-heading" title="Skills" />
@@ -86,6 +74,6 @@ export default function Home() {
           <p>&copy; {new Date().getFullYear()} {profile.name}</p>
         </footer>
       </div>
-    </div>
+    </>
   );
 }

@@ -1,20 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export default function NotFound() {
   return (
-    <div className={`${geistSans.variable} ${geistMono.variable} font-sans`}>
+    <>
       <Head>
         <title>404 -- Page Not Found</title>
         <meta name="robots" content="noindex, nofollow" />
@@ -35,6 +24,6 @@ export default function NotFound() {
           Back to home
         </Link>
       </div>
-    </div>
+    </>
   );
 }
