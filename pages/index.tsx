@@ -5,7 +5,19 @@ import ExperienceList from "@/components/ExperienceList";
 import ProjectCard from "@/components/ProjectCard";
 import profile from "@/data/profile";
 
-export default function Home() {
+import type { InferGetStaticPropsType } from "next";
+
+export function getStaticProps() {
+  return {
+    props: {
+      profile,
+    },
+  };
+}
+
+export default function Home({
+  profile,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <SeoHead profile={profile} />
