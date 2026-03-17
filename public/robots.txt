@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://janedoe.dev/sitemap.xml
+Sitemap: https://ghozi-landing-page.vercel.app/sitemap.xml
