@@ -9,6 +9,30 @@ const profile: Profile = {
   github: "https://github.com/ghozifidaul",
   linkedin: "https://linkedin.com/in/ghozifidaul",
 
+  keywords: [
+    "Ghozi Fidaul",
+    "AI Product Engineer",
+    "Software Engineer",
+    "Full Stack Developer",
+    "Frontend Developer",
+    "Mobile App Developer",
+    "React Developer",
+    "Next.js Developer",
+    "React Native Developer",
+    "Flutter Developer",
+    "TypeScript",
+    "JavaScript",
+    "Python",
+    "Tailwind CSS",
+    "AWS",
+    "Azure",
+    "LLM Integration",
+    "AI Powered Products",
+    "Cross Platform Mobile Apps",
+    "Web Application Developer",
+    "Indonesia",
+  ],
+
   skills: [
     {
       category: "Frontend",
