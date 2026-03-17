@@ -27,4 +27,16 @@ describe("SectionHeading", () => {
     const paragraphs = container.querySelectorAll("p");
     expect(paragraphs).toHaveLength(0);
   });
+
+  it("sets the id attribute on the heading when provided", () => {
+    render(<SectionHeading title="Skills" id="skills-heading" />);
+    const heading = screen.getByRole("heading", { level: 2 });
+    expect(heading).toHaveAttribute("id", "skills-heading");
+  });
+
+  it("does not set an id attribute when omitted", () => {
+    render(<SectionHeading title="Skills" />);
+    const heading = screen.getByRole("heading", { level: 2 });
+    expect(heading).not.toHaveAttribute("id");
+  });
 });
