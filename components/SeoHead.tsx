@@ -7,7 +7,7 @@ type SeoHeadProps = {
   siteUrl?: string;
 };
 
-export default function SeoHead({ profile, siteUrl = "https://janedoe.dev" }: SeoHeadProps) {
+export default function SeoHead({ profile, siteUrl = "https://ghozi-landing-page.vercel.app" }: SeoHeadProps) {
   const title = `${profile.name} -- ${profile.role}`;
   const description = profile.bio;
   const ogImage = `${siteUrl}/ss-landing-page.webp`;
