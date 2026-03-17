@@ -21,8 +21,8 @@ export default function ExperienceList({ items }: ExperienceListProps) {
             </time>
           </div>
           <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-fg">
-            {item.bullets.map((bullet, index) => (
-              <li key={index} className="pl-4 relative before:absolute before:left-0 before:content-['--'] before:text-muted">
+            {item.bullets.map((bullet) => (
+              <li key={bullet} className="pl-4 relative before:absolute before:left-0 before:content-['--'] before:text-muted">
                 {bullet}
               </li>
             ))}
