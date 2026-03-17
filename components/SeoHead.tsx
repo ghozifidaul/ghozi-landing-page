@@ -29,6 +29,9 @@ export default function SeoHead({ profile, siteUrl = "https://ghozi-landing-page
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
+      {profile.keywords && profile.keywords.length > 0 && (
+        <meta name="keywords" content={profile.keywords.join(", ")} />
+      )}
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={siteUrl} />
 
